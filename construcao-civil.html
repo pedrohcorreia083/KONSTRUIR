@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Construção Civil e Infraestrutura — Konstruir Engenharia</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" id="siteHeader">
+    <div class="container-xl">
+      <nav class="d-flex align-items-center justify-content-between py-3">
+        <a href="index.html" class="text-decoration-none">
+          <img src="https://media.base44.com/images/public/69f974116a29c0ce78d97c8c/794083f43_LogoPrincipalVertical.png" alt="Konstruir Engenharia" class="logo-img" />
+        </a>
+        <ul class="nav-links d-none d-lg-flex align-items-center gap-4 list-unstyled mb-0">
+          <li><a href="index.html" class="nav-link-item">Home</a></li>
+          <li><a href="estruturas-metalicas.html" class="nav-link-item">Estruturas Metálicas</a></li>
+          <li><a href="manutencao-corporativa.html" class="nav-link-item">Manutenção</a></li>
+          <li><a href="reformas-retrofit.html" class="nav-link-item">Reformas & Retrofit</a></li>
+          <li><a href="construcao-civil.html" class="nav-link-item active">Construção Civil</a></li>
+        </ul>
+        <a href="index.html#contato" class="btn-cta d-none d-lg-inline-flex">Consulta Técnica</a>
+        <button class="mobile-toggle d-lg-none" id="mobileToggle"><i class="bi bi-list fs-4"></i></button>
+      </nav>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <ul class="list-unstyled mb-0 p-4">
+        <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+        <li><a href="estruturas-metalicas.html" class="mobile-nav-link">Estruturas Metálicas</a></li>
+        <li><a href="manutencao-corporativa.html" class="mobile-nav-link">Manutenção Corporativa</a></li>
+        <li><a href="reformas-retrofit.html" class="mobile-nav-link">Reformas & Retrofit</a></li>
+        <li><a href="construcao-civil.html" class="mobile-nav-link">Construção Civil</a></li>
+        <li class="mt-3"><a href="index.html#contato" class="btn-cta d-block text-center">Consulta Técnica</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="service-page-hero">
+    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1800&q=80" alt="Construção Civil" />
+    <div class="sph-overlay"></div>
+    <div class="container-xl">
+      <div class="sph-content animate-fade-up">
+        <div class="breadcrumb-trail">
+          <a href="index.html">Home</a>
+          <i class="bi bi-chevron-right" style="font-size:.6rem"></i>
+          <span class="current">Construção Civil</span>
+        </div>
+        <h1 class="sph-title">Construção Civil<br>e Infraestrutura</h1>
+        <p class="sph-sub">Construir no setor industrial e comercial exige mais do que levantar paredes; exige planejamento logístico e conhecimento técnico de solo e carga.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <section class="py-section">
+    <div class="container-xl">
+      <div class="art-badge reveal">
+        <i class="bi bi-patch-check-fill"></i>
+        <span>ART Disponível &bull; Conformidade NRs &bull; CREA</span>
+      </div>
+
+      <!-- Texto inicial -->
+      <div class="row mb-5">
+        <div class="col-lg-8 reveal">
+          <p class="body-text">Na Konstruir Engenharia, entregamos a base sólida que o seu crescimento precisa, focando em:</p>
+          <div class="row g-3 mt-2">
+            <div class="col-md-4">
+              <div class="diferencial-card">
+                <i class="bi bi-building-check text-cyan fs-3 mb-2 d-block"></i>
+                <strong class="text-navy">Segurança Estrutural</strong>
+                <p class="small mt-1 mb-0">Projetos calculados para durabilidade e resistência.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="diferencial-card">
+                <i class="bi bi-diagram-3 text-cyan fs-3 mb-2 d-block"></i>
+                <strong class="text-navy">Inteligência em Infraestrutura</strong>
+                <p class="small mt-1 mb-0">Soluções que previnem problemas futuros de drenagem, solo e fundação.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="diferencial-card">
+                <i class="bi bi-patch-check text-cyan fs-3 mb-2 d-block"></i>
+                <strong class="text-navy">Conformidade Normativa</strong>
+                <p class="small mt-1 mb-0">Rigor total com ABNT e prefeituras, garantindo que sua obra seja legalizada desde o primeiro dia.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-5">
+        <!-- Especialidades -->
+        <div class="col-lg-6 reveal">
+          <h2 class="section-title" style="font-size:clamp(1.5rem,2.5vw,2rem)">Especialidades em Construção e Infraestrutura</h2>
+          <div class="accordion accordion-flush" id="accordionCivil">
+            <div class="accordion-item border-bottom">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed acc-btn" type="button" data-bs-toggle="collapse" data-bs-target="#c1">
+                  Construção de Galpões e Unidades Industriais
+                </button>
+              </h2>
+              <div id="c1" class="accordion-collapse collapse" data-bs-parent="#accordionCivil">
+                <div class="accordion-body acc-body">Execução completa, desde a fundação técnica até o fechamento estrutural, integrando alvenaria e metalurgia.</div>
+              </div>
+            </div>
+            <div class="accordion-item border-bottom">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed acc-btn" type="button" data-bs-toggle="collapse" data-bs-target="#c2">
+                  Terraplanagem e Demolição Controlada
+                </button>
+              </h2>
+              <div id="c2" class="accordion-collapse collapse" data-bs-parent="#accordionCivil">
+                <div class="accordion-body acc-body">Preparação de terreno e remoção de estruturas antigas com gestão de resíduos e máxima segurança operacional.</div>
+              </div>
+            </div>
+            <div class="accordion-item border-bottom">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed acc-btn" type="button" data-bs-toggle="collapse" data-bs-target="#c3">
+                  Pisos Industriais e Pavimentação
+                </button>
+              </h2>
+              <div id="c3" class="accordion-collapse collapse" data-bs-parent="#accordionCivil">
+                <div class="accordion-body acc-body">Execução de lajes de alta resistência e pavimentação de pátios logísticos para tráfego pesado.</div>
+              </div>
+            </div>
+            <div class="accordion-item border-bottom">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed acc-btn" type="button" data-bs-toggle="collapse" data-bs-target="#c4">
+                  Projetos de Acessibilidade (Calçadas e Rampas)
+                </button>
+              </h2>
+              <div id="c4" class="accordion-collapse collapse" data-bs-parent="#accordionCivil">
+                <div class="accordion-body acc-body">Adequação total às normas municipais e ABNT NBR 9050. Evite multas e garanta o acesso universal ao seu negócio.</div>
+              </div>
+            </div>
+            <div class="accordion-item border-bottom">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed acc-btn" type="button" data-bs-toggle="collapse" data-bs-target="#c5">
+                  Drenagem e Redes Pluviais
+                </button>
+              </h2>
+              <div id="c5" class="accordion-collapse collapse" data-bs-parent="#accordionCivil">
+                <div class="accordion-body acc-body">Implantação de sistemas de escoamento de grande porte para proteger sua planta industrial contra inundações.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed acc-btn" type="button" data-bs-toggle="collapse" data-bs-target="#c6">
+                  Muros de Arrimo e Contenção
+                </button>
+              </h2>
+              <div id="c6" class="accordion-collapse collapse" data-bs-parent="#accordionCivil">
+                <div class="accordion-body acc-body">Soluções de engenharia para desníveis de terreno, garantindo a estabilidade de encostas e áreas de expansão.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Diferenciais -->
+        <div class="col-lg-6 reveal" style="animation-delay:.2s">
+          <h2 class="section-title" style="font-size:clamp(1.5rem,2.5vw,2rem)">Por que confiar sua obra à Konstruir?</h2>
+          <div class="space-y">
+            <div class="diferencial-item">
+              <i class="bi bi-check-circle-fill text-cyan me-2"></i>
+              <div><strong>Gestão de Documentação (ART):</strong> 100% das obras são entregues com Anotação de Responsabilidade Técnica e laudos detalhados.</div>
+            </div>
+            <div class="diferencial-item">
+              <i class="bi bi-check-circle-fill text-cyan me-2"></i>
+              <div><strong>Domínio de NRs e ABNT:</strong> Nossa experiência de 25 anos garante que sua construção passe por qualquer fiscalização técnica ou de segurança.</div>
+            </div>
+            <div class="diferencial-item">
+              <i class="bi bi-check-circle-fill text-cyan me-2"></i>
+              <div><strong>Preço Justo e Cronograma Real:</strong> Sem orçamentos "subestimados" que estouram depois. Entregamos a realidade do custo e do prazo.</div>
+            </div>
+            <div class="diferencial-item">
+              <i class="bi bi-check-circle-fill text-cyan me-2"></i>
+              <div><strong>Expertise em Ambientes Operacionais:</strong> Sabemos construir enquanto sua empresa opera ao lado, minimizando ruídos e isolando riscos.</div>
+            </div>
+          </div>
+
+          <h3 class="fw-bold text-navy mt-5 mb-3">Nosso Compromisso com a Entrega:</h3>
+          <ul class="list-unstyled para-quem-list">
+            <li><i class="bi bi-geo-alt text-cyan me-2"></i><strong>Análise de Solo e Viabilidade:</strong> Garantia de que a fundação é a correta para o seu tipo de carga.</li>
+            <li><i class="bi bi-hard-drive text-cyan me-2"></i><strong>Execução Normatizada:</strong> Equipes treinadas para trabalhar em conformidade com as normas de segurança do trabalho.</li>
+            <li><i class="bi bi-clipboard-check text-cyan me-2"></i><strong>Fiscalização de Etapas:</strong> Rigoroso controle de qualidade em cada fase da construção.</li>
+          </ul>
+
+          <a href="index.html#contato" class="btn-cta mt-4 d-inline-flex">Solicitar Orçamento</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-strip">
+    <div class="container-xl">
+      <h2>Pronto para começar seu projeto?</h2>
+      <p>Nossa equipe técnica está pronta para analisar seu projeto e oferecer a melhor solução com orçamento detalhado e cronograma realista.</p>
+      <a href="index.html#contato" class="btn-cta">Solicitar Consulta Técnica</a>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container-xl">
+      <div class="row g-5 py-5">
+        <div class="col-md-4">
+          <img src="https://media.base44.com/images/public/69f974116a29c0ce78d97c8c/794083f43_LogoPrincipalVertical.png" alt="Konstruir Engenharia" class="logo-img logo-footer mb-3" />
+          <p class="text-white-50 small lh-lg">25 anos transformando desafios do canteiro em processos inteligentes.</p>
+        </div>
+        <div class="col-md-4">
+          <h5 class="footer-heading">Serviços</h5>
+          <ul class="list-unstyled footer-links">
+            <li><a href="estruturas-metalicas.html">Estruturas Metálicas</a></li>
+            <li><a href="manutencao-corporativa.html">Manutenção Corporativa</a></li>
+            <li><a href="reformas-retrofit.html">Reformas & Retrofit</a></li>
+            <li><a href="construcao-civil.html">Construção Civil</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5 class="footer-heading">Contato</h5>
+          <ul class="list-unstyled footer-links">
+            <li>contato@konstruir.com.br</li>
+            <li>(11) 9999-9999</li>
+            <li>São Paulo, SP — Brasil</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Konstruir Engenharia. Todos os direitos reservados.</span>
+        <span>ART • CREA • Conformidade NRs</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
