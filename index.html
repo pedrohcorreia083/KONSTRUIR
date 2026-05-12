@@ -2,6 +2,18 @@
 <html lang="pt-BR">
 
 <head>
+
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NLHBCBRT');</script>
+  <!-- End Google Tag Manager -->
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Konstruir Engenharia — 25 Anos de Excelência</title>
@@ -16,6 +28,11 @@
 
 <body>
 
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NLHBCBRT" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
   <!-- HEADER -->
   <header class="site-header" id="siteHeader">
     <div class="container-xl">
@@ -25,12 +42,12 @@
         </a>
         <ul class="nav-links d-none d-lg-flex align-items-center gap-4 list-unstyled mb-0">
           <li><a href="index.html" class="nav-link-item active">Home</a></li>
-          <li><a href="estruturas-metalicas.html" class="nav-link-item">Estruturas Metálicas</a></li>
-          <li><a href="manutencao-corporativa.html" class="nav-link-item">Manutenção</a></li>
+          <li><a href="manutencao-corporativa.html" class="nav-link-item">Manutenção Corporativa</a></li>
           <li><a href="reformas-retrofit.html" class="nav-link-item">Reformas & Retrofit</a></li>
-          <li><a href="construcao-civil.html" class="nav-link-item">Construção Civil</a></li>
+          <li><a href="construcao-civil.html" class="nav-link-item">Infraestrutura e Construção</a></li>
+          <li><a href="estruturas-metalicas.html" class="nav-link-item">Estruturas Metálicas</a></li>
         </ul>
-        <a href="#contato" class="btn-cta d-none d-lg-inline-flex">Consulta Técnica</a>
+        <a href="#contato" class="btn-cta d-none d-lg-inline-flex">Contato</a>
         <button class="mobile-toggle d-lg-none" id="mobileToggle" aria-label="Menu">
           <i class="bi bi-list fs-4"></i>
         </button>
@@ -112,63 +129,104 @@
   <!-- SOLUÇÕES -->
   <section class="section-services py-section bg-light-section" id="servicos">
     <div class="blueprint-line top"></div>
+
     <div class="container-xl">
       <div class="mb-5 reveal">
         <span class="section-tag">O Que Fazemos</span>
         <h2 class="section-title">Soluções</h2>
       </div>
+
       <div class="row g-4">
-        <div class="col-md-6 reveal">
-          <a href="estruturas-metalicas.html" class="service-card">
-            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=80"
-              alt="Estruturas Metálicas" />
-            <div class="service-overlay"></div>
-            <div class="service-body">
-              <h3 class="service-title">Estruturas Metálicas e Coberturas</h3>
-              <p class="service-desc">Projetos e execução de mezaninos, galpões e reforços estruturais. Soluções de alta
-                resistência e montagem ágil para indústrias e comércio.</p>
-              <span class="service-cta">Explorar <i class="bi bi-arrow-right ms-1"></i></span>
+
+        <!-- Card -->
+        <div class="col-md-6 col-lg-3 reveal" style="animation-delay:.15s">
+          <a href="manutencao-corporativa.html" class="solution-card">
+            <div class="solution-icon">
+              <img src="./img/icons/manutencao.png" alt="">
             </div>
+
+            <h3 class="solution-title">
+              Manutenção Corporativa
+            </h3>
+
+            <p class="solution-desc">
+              Atendimento preventivo e corretivo para manter sua operação ativa.
+            </p>
+
+            <span class="solution-cta">
+              Ver mais
+              <i class="bi bi-arrow-right ms-1"></i>
+            </span>
           </a>
         </div>
-        <div class="col-md-6 reveal" style="animation-delay:.15s">
-          <a href="manutencao-corporativa.html" class="service-card">
-            <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=900&q=80"
-              alt="Manutenção Corporativa" />
-            <div class="service-overlay"></div>
-            <div class="service-body">
-              <h3 class="service-title">Manutenção Corporativa e Industrial</h3>
-              <p class="service-desc">Atendimento preventivo e corretivo para manter sua operação 100% ativa. Reparos em
-                fachadas, telhados, sistemas hidráulicos e elétricos.</p>
-              <span class="service-cta">Explorar <i class="bi bi-arrow-right ms-1"></i></span>
+
+        <!-- Card -->
+        <div class="col-md-6 col-lg-3 reveal" style="animation-delay:.3s">
+          <a href="reformas-retrofit.html" class="solution-card">
+            <div class="solution-icon">
+              <img src="./img/icons/retrofit.png" alt="">
             </div>
+
+            <h3 class="solution-title">
+              Reformas e Retrofit
+            </h3>
+
+            <p class="solution-desc">
+              Modernização completa de ambientes com foco em estética e funcionalidade.
+            </p>
+
+            <span class="solution-cta">
+              Ver mais
+              <i class="bi bi-arrow-right ms-1"></i>
+            </span>
           </a>
         </div>
-        <div class="col-md-6 reveal" style="animation-delay:.3s">
-          <a href="reformas-retrofit.html" class="service-card">
-            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&q=80"
-              alt="Reformas e Retrofit" />
-            <div class="service-overlay"></div>
-            <div class="service-body">
-              <h3 class="service-title">Reformas e Retrofit (Turnkey)</h3>
-              <p class="service-desc">Modernização completa de escritórios, clínicas, bares e restaurantes. Trocamos o
-                piso, drywall e iluminação com foco em estética e funcionalidade.</p>
-              <span class="service-cta">Explorar <i class="bi bi-arrow-right ms-1"></i></span>
+
+        <!-- Card -->
+        <div class="col-md-6 col-lg-3 reveal" style="animation-delay:.45s">
+          <a href="construcao-civil.html" class="solution-card">
+            <div class="solution-icon">
+              <img src="./img/icons/construcao.png" alt="">
             </div>
+
+            <h3 class="solution-title">
+              Infraestrutura e Construção
+            </h3>
+
+            <p class="solution-desc">
+              Construções, demolições, terraplanagem e adequação ABNT.
+            </p>
+
+            <span class="solution-cta">
+              Ver mais
+              <i class="bi bi-arrow-right ms-1"></i>
+            </span>
           </a>
         </div>
-        <div class="col-md-6 reveal" style="animation-delay:.45s">
-          <a href="construcao-civil.html" class="service-card">
-            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=900&q=80" alt="Construção Civil" />
-            <div class="service-overlay"></div>
-            <div class="service-body">
-              <h3 class="service-title">Construção Civil e Infraestrutura</h3>
-              <p class="service-desc">Construções do zero, demolições, terraplanagem e adequação de calçadas
-                (Acessibilidade/ABNT). Gestão completa com emissão de ART e laudos técnicos.</p>
-              <span class="service-cta">Explorar <i class="bi bi-arrow-right ms-1"></i></span>
+
+        <!-- Card -->
+        <div class="col-md-6 col-lg-3 reveal">
+          <a href="estruturas-metalicas.html" class="solution-card">
+            <div class="solution-icon">
+              <img src="./img/icons/estrutura.png" alt="">
             </div>
+
+            <h3 class="solution-title">
+              Estruturas metálicas
+            </h3>
+
+            <p class="solution-desc">
+              Projetos e execução de mezaninos, galpões e reforços estruturais.
+              Soluções resistentes e montagem ágil.
+            </p>
+
+            <span class="solution-cta">
+              Ver mais
+              <i class="bi bi-arrow-right ms-1"></i>
+            </span>
           </a>
         </div>
+
       </div>
     </div>
   </section>
@@ -189,10 +247,10 @@
           <div class="timeline-index">01</div>
           <div class="timeline-content">
             <div class="d-flex align-items-center gap-2 mb-2">
-              <i class="bi bi-clock text-cyan fs-5"></i>
+              <i class="bi bi-clock text-cyan ms-2 fs-5"></i>
               <h3 class="timeline-title">Gestão de Prazos e Compromisso com a Entrega</h3>
             </div>
-            <p class="body-text mb-0">Transformamos cronogramas em metas cumpridas. Através de um planejamento logístico
+            <p class="body-text ms-3 mb-0">Transformamos cronogramas em metas cumpridas. Através de um planejamento logístico
               estratégico, garantimos que sua empresa mantenha a continuidade operacional, assegurando a entrega
               conforme o planejado — ou com antecipação.</p>
           </div>
@@ -202,10 +260,10 @@
           <div class="timeline-index">02</div>
           <div class="timeline-content">
             <div class="d-flex align-items-center gap-2 mb-2">
-              <i class="bi bi-stars text-cyan fs-5"></i>
+              <i class="bi bi-stars text-cyan ms-2 fs-5"></i>
               <h3 class="timeline-title">Excelência Operacional e Organização Sistêmica</h3>
             </div>
-            <p class="body-text mb-0">Compreendemos a dinâmica de ambientes de alto fluxo. Nosso canteiro de obras é
+            <p class="body-text ms-3 mb-2">Compreendemos a dinâmica de ambientes de alto fluxo. Nosso canteiro de obras é
               pautado pela ordem e pela limpeza de padrão industrial. Entregamos seu espaço pronto para ocupação
               imediata, com assepsia total e sem vestígios de intervenção.</p>
           </div>
@@ -215,10 +273,10 @@
           <div class="timeline-index">03</div>
           <div class="timeline-content">
             <div class="d-flex align-items-center gap-2 mb-2">
-              <i class="bi bi-file-earmark-text text-cyan fs-5"></i>
+              <i class="bi bi-file-earmark-text text-cyan ms-2 fs-5"></i>
               <h3 class="timeline-title">Transparência e Previsibilidade Financeira</h3>
             </div>
-            <p class="body-text mb-0">Apresentamos orçamentos detalhados, realistas e definitivos. Nossa metodologia
+            <p class="body-text ms-3 mb-0">Apresentamos orçamentos detalhados, realistas e definitivos. Nossa metodologia
               oferece a segurança patrimonial que gestores e diretores exigem, viabilizando investimentos assertivos,
               sem variações orçamentárias ou custos ocultos.</p>
           </div>
@@ -228,10 +286,10 @@
           <div class="timeline-index">04</div>
           <div class="timeline-content">
             <div class="d-flex align-items-center gap-2 mb-2">
-              <i class="bi bi-shield-check text-cyan fs-5"></i>
+              <i class="bi bi-shield-check text-cyan ms-2 fs-5"></i>
               <h3 class="timeline-title">Conformidade Normativa e Engenharia Consultiva</h3>
             </div>
-            <p class="body-text mb-0">Operamos sob o estrito cumprimento das normas técnicas (ABNT) e de segurança
+            <p class="body-text ms-3 mb-0">Operamos sob o estrito cumprimento das normas técnicas (ABNT) e de segurança
               (NRs), com emissão compulsória de ART. Sua infraestrutura é protegida por uma gestão técnica de alta
               complexidade, garantindo conformidade legal e solidez em cada detalhe.</p>
           </div>
@@ -275,13 +333,13 @@
           <div class="contact-info">
             <div class="contact-info-item">
               <div class="contact-info-icon"><i class="bi bi-whatsapp"></i></div>
-              <a href="https://wa.me/5511999897493" target="_blank"
-                class="text-decoration-none text-dark fw-medium">(11) 99989-7493</a>
+              <a href="https://wa.me/5511940237813" target="_blank"
+                class="text-decoration-none text-dark fw-medium">(11) 94023-7813</a>
             </div>
             <div class="contact-info-item">
               <div class="contact-info-icon"><i class="bi bi-envelope"></i></div>
-              <span><a href="mailto:contato@konstruireng.com.br" target="_blank"
-                  class="text-decoration-none text-dark fw-medium">contato@konstruireng.com.br</a></span>
+              <span><a href="mailto:jorge@konstruireng.com.br" target="_blank"
+                  class="text-decoration-none text-dark fw-medium">jorge@konstruireng.com.br</a></span>
             </div>
             <div class="contact-info-item">
               <div class="contact-info-icon"><i class="bi bi-geo-alt"></i></div>
@@ -293,7 +351,7 @@
                 class="text-decoration-none text-dark fw-medium">@konstruirengenharia</a>
             </div>
           </div>
-          <a href="https://wa.me/5511999897493" target="_blank" class="btn-cta mt-5 d-inline-flex">
+          <a href="https://wa.me/5511940237813" target="_blank" class="btn-cta mt-5 d-inline-flex">
             <i class="bi bi-whatsapp me-2"></i> Chamar no WhatsApp
           </a>
         </div>
@@ -310,7 +368,7 @@
               </div>
               <div class="mb-4">
                 <label class="form-label-custom">Telefone</label>
-                <input type="tel" class="form-input-custom" placeholder="(11) 99989-7493" />
+                <input type="tel" class="form-input-custom" placeholder="(11) 94023-7813" />
               </div>
               <div class="mb-4">
                 <label class="form-label-custom">Mensagem</label>
@@ -335,7 +393,7 @@
           <div class="d-flex gap-3 mt-3">
             <a href="https://www.instagram.com/konstruirengenharia/" target="_blank" class="footer-social"><i
                 class="bi bi-instagram"></i></a>
-            <a href="https://wa.me/5511999897493" target="_blank" class="footer-social"><i
+            <a href="https://wa.me/5511940237813" target="_blank" class="footer-social"><i
                 class="bi bi-whatsapp"></i></a>
           </div>
         </div>
@@ -352,11 +410,11 @@
           <h5 class="footer-heading">Contato</h5>
           <ul class="list-unstyled footer-links">
 
-            <li><a href="https://wa.me/5511999897493" target="_blank" class="d-flex align-items-center gap-2"><i
-                  class="bi bi-whatsapp text-cyan"></i>(11) 99989-7493</a></li>
+            <li><a href="https://wa.me/5511940237813" target="_blank" class="d-flex align-items-center gap-2"><i
+                  class="bi bi-whatsapp text-cyan"></i>(11) 94023-7813</a></li>
 
-            <li><a href="mailto:contato@konstruireng.com.br" target="_blank" class="d-flex align-items-center gap-2"><i
-                  class="bi bi-envelope text-cyan"></i>contato@konstruireng.com.br</a></li>
+            <li><a href="mailto:jorge@konstruireng.com.br" target="_blank" class="d-flex align-items-center gap-2"><i
+                  class="bi bi-envelope text-cyan"></i>jorge@konstruireng.com.br</a></li>
 
             <li><a href="" target="_blank" class="d-flex align-items-center gap-2"><i
                   class="bi bi-geo-alt text-cyan"></i>São Paulo, SP — Brasil</a></li>
@@ -375,7 +433,7 @@
   </footer>
 
   <!-- WhatsApp flutuante -->
-  <a href="https://wa.me/5511999897493" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+  <a href="https://wa.me/5511940237813" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
     <i class="bi bi-whatsapp"></i>
   </a>
 
