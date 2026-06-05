@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manutenção Residencial — Konstruir Engenharia</title>
+    <meta name="description"
+        content="Toda a segurança de uma grande empresa de engenharia dedicada à reforma da sua casa ou apartamento. Prazo garantido e respeito ao seu bolso." />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        /* CRONOGRAMA HORIZONTAL */
+        .cronograma {
+            background: var(--navy);
+            padding: 3.5rem 0;
+        }
+
+        .cronograma-title {
+            font-size: .7rem;
+            font-weight: 800;
+            letter-spacing: .35em;
+            text-transform: uppercase;
+            color: var(--cyan);
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .timeline-h {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 0;
+            position: relative;
+        }
+
+        .timeline-h::before {
+            content: '';
+            position: absolute;
+            top: 18px;
+            left: 12.5%;
+            right: 12.5%;
+            height: 2px;
+            background: rgba(0, 174, 255, .3);
+            z-index: 0;
+        }
+
+        .th-step {
+            flex: 1;
+            max-width: 200px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            padding: 0 1rem;
+        }
+
+        .th-dot {
+            width: 36px;
+            height: 36px;
+            background: var(--cyan);
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: .8rem;
+            font-weight: 800;
+            color: #fff;
+            box-shadow: 0 0 0 6px rgba(0, 174, 255, .15);
+        }
+
+        .th-label {
+            font-size: .85rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: .35rem;
+            text-transform: uppercase;
+            letter-spacing: .06em;
+        }
+
+        .th-desc {
+            font-size: .78rem;
+            color: rgba(255, 255, 255, .55);
+            line-height: 1.5;
+        }
+
+        /* CALCULADORA CTA */
+        .calc-cta {
+            background: linear-gradient(135deg, #00b8e6 0%, #0082c8 100%);
+            border-radius: 12px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .calc-cta h3 {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: .5rem;
+        }
+
+        .calc-cta p {
+            color: rgba(255, 255, 255, .85);
+            font-size: .95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-white {
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            padding: .85rem 2rem;
+            background: #fff;
+            color: var(--navy);
+            font-size: .8rem;
+            font-weight: 800;
+            letter-spacing: .15em;
+            text-transform: uppercase;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: box-shadow .2s, transform .2s;
+        }
+
+        .btn-white:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .15);
+            transform: translateY(-2px);
+            color: var(--navy);
+        }
+
+        @media (max-width: 576px) {
+            .timeline-h {
+                flex-direction: column;
+                align-items: center;
+                gap: 1.5rem;
+            }
+
+            .timeline-h::before {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header" id="siteHeader">
+        <div class="container-xl">
+            <nav class="d-flex align-items-center justify-content-between py-3">
+                <a href="index.html" class="text-decoration-none">
+                    <img src="https://media.base44.com/images/public/69f974116a29c0ce78d97c8c/de2abe68b_logo.png"
+                        alt="Konstruir Engenharia" class="logo-img" />
+                </a>
+                <ul class="nav-links d-none d-lg-flex align-items-center gap-4 list-unstyled mb-0">
+                    <li><a href="index.html" class="nav-link-item">Home</a></li>
+                    <li><a href="estruturas-metalicas.html" class="nav-link-item">Estruturas Metálicas</a></li>
+                    <li><a href="manutencao-corporativa.html" class="nav-link-item">Manutenção</a></li>
+                    <li><a href="reformas-retrofit.html" class="nav-link-item">Reformas & Retrofit</a></li>
+                    <li><a href="construcao-civil.html" class="nav-link-item">Construção Civil</a></li>
+                    <li><a href="residencial.html" class="nav-link-item active">Residencial</a></li>
+                    <li><a href="cases.html" class="nav-link-item">Cases</a></li>
+                </ul>
+                <a href="index.html#contato" class="btn-cta d-none d-lg-inline-flex">Consulta Técnica</a>
+                <button class="mobile-toggle d-lg-none" id="mobileToggle"><i class="bi bi-list fs-4"></i></button>
+            </nav>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <ul class="list-unstyled mb-0 p-4">
+                <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+                <li><a href="estruturas-metalicas.html" class="mobile-nav-link">Estruturas Metálicas</a></li>
+                <li><a href="manutencao-corporativa.html" class="mobile-nav-link">Manutenção Corporativa</a></li>
+                <li><a href="reformas-retrofit.html" class="mobile-nav-link">Reformas & Retrofit</a></li>
+                <li><a href="construcao-civil.html" class="mobile-nav-link">Construção Civil</a></li>
+                <li><a href="residencial.html" class="mobile-nav-link">Residencial</a></li>
+                <li><a href="cases.html" class="mobile-nav-link">Cases</a></li>
+                <li class="mt-3"><a href="index.html#contato" class="btn-cta d-block text-center">Consulta Técnica</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="service-page-hero service-page-hero--sm">
+        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1800&q=80"
+            alt="Manutenção Residencial" />
+        <div class="sph-overlay"></div>
+        <div class="container-xl">
+            <div class="sph-content animate-fade-up">
+                <div class="breadcrumb-trail">
+                    <a href="index.html">Home</a>
+                    <i class="bi bi-chevron-right" style="font-size:.6rem"></i>
+                    <span class="current">Manutenção Residencial</span>
+                </div>
+                <h1 class="sph-title">Manutenção<br>Residencial</h1>
+                <p class="sph-sub">Toda a segurança e a organização de uma grande empresa de engenharia, dedicada a
+                    cuidar da reforma da sua casa ou apartamento. Prazo garantido e respeito ao seu bolso.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOCO 1: SOLUÇÕES (texto esq | imagem dir) -->
+    <section class="content-split py-section">
+        <div class="container-xl">
+            <div class="row align-items-center g-5 reveal">
+                <div class="col-lg-6">
+                    <span class="section-tag">Do Projeto às Chaves</span>
+                    <h2 class="section-title" style="font-size:clamp(1.6rem,3vw,2.5rem)">Soluções Completas para a sua
+                        Reforma</h2>
+                    <p class="body-text">Cuidamos de cada etapa com o mesmo rigor técnico que aplicamos em grandes obras
+                        corporativas — agora voltado exclusivamente para o seu lar.</p>
+
+                    <div class="accordion accordion-flush mt-4" id="accordionRes">
+                        <div class="accordion-item border-bottom">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed acc-btn" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#r1">
+                                    <i class="bi bi-pencil-square text-cyan me-2"></i> Projetos e Compatibilização
+                                </button>
+                            </h2>
+                            <div id="r1" class="accordion-collapse collapse" data-bs-parent="#accordionRes">
+                                <div class="accordion-body acc-body">Transformamos suas ideias e o projeto do seu
+                                    arquiteto em realidade, analisando cada detalhe antes do início das obras. Essa
+                                    etapa garante que a distribuição dos ambientes e a escolha dos materiais funcionem
+                                    em perfeita harmonia, evitando retrabalhos e desperdícios.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-bottom">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed acc-btn" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#r2">
+                                    <i class="bi bi-building-x text-cyan me-2"></i> Demolição Estrutural e Técnica
+                                </button>
+                            </h2>
+                            <div id="r2" class="accordion-collapse collapse" data-bs-parent="#accordionRes">
+                                <div class="accordion-body acc-body">Executada com total segurança, planejamento e
+                                    isolamento da área. Realizamos a abertura de vãos e a remoção de estruturas internas
+                                    respeitando rigidamente os limites de carga do imóvel, com controle de ruídos e
+                                    destinação responsável dos resíduos.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-bottom">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed acc-btn" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#r3">
+                                    <i class="bi bi-lightning-charge text-cyan me-2"></i> Instalações Elétricas e
+                                    Hidráulicas
+                                </button>
+                            </h2>
+                            <div id="r3" class="accordion-collapse collapse" data-bs-parent="#accordionRes">
+                                <div class="accordion-body acc-body">Modernizamos toda a infraestrutura invisível do seu
+                                    lar. Substituímos e dimensionamos redes de água, gás e energia para suportar com
+                                    total segurança os novos sistemas de automação, climatização e equipamentos
+                                    modernos, eliminando riscos de sobrecarga ou infiltrações.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-bottom">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed acc-btn" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#r4">
+                                    <i class="bi bi-grid text-cyan me-2"></i> Revestimentos e Acabamentos Especiais
+                                </button>
+                            </h2>
+                            <div id="r4" class="accordion-collapse collapse" data-bs-parent="#accordionRes">
+                                <div class="accordion-body acc-body">A etapa onde a precisão técnica encontra a
+                                    estética. Nossa equipe é altamente qualificada para o assentamento de porcelanatos,
+                                    grandes formatos, vinílicos e revestimentos nobres, garantindo alinhamentos
+                                    perfeitos, paginações impecáveis e alta durabilidade.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed acc-btn" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#r5">
+                                    <i class="bi bi-brush text-cyan me-2"></i> Pintura e Acabamento Fino
+                                </button>
+                            </h2>
+                            <div id="r5" class="accordion-collapse collapse" data-bs-parent="#accordionRes">
+                                <div class="accordion-body acc-body">O toque final que valoriza o seu imóvel.
+                                    Trabalhamos com preparação minuciosa de superfícies para entregar paredes
+                                    perfeitamente lisas, correções imperceptíveis e uma aplicação de pintura com
+                                    acabamento premium, realçando a iluminação e o design dos ambientes.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 reveal" style="animation-delay:.2s">
+                    <div class="split-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=900&q=80"
+                            alt="Reforma residencial" class="split-img" />
+                        <div class="split-img-badge"><i class="bi bi-house-check me-1"></i> Do projeto às chaves</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALCULADORA CTA -->
+    <section class="py-section bg-light-section">
+        <div class="blueprint-line top"></div>
+        <div class="container-xl">
+            <div class="calc-cta reveal">
+                <h3>📐 Simule o custo da sua reforma</h3>
+                <p>Use nossa Calculadora de Reforma e descubra em minutos quanto vai custar transformar o seu espaço.
+                </p>
+                <a href="https://zaql24km.paperform.co/" target="_blank" class="btn-white">
+                    <i class="bi bi-calculator"></i> Acessar Calculadora de Reforma
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CRONOGRAMA DE EXECUÇÃO -->
+    <div class="cronograma">
+        <div class="container-xl">
+            <div class="cronograma-title">Nosso Cronograma de Execução</div>
+            <div class="timeline-h">
+                <div class="th-step reveal">
+                    <div class="th-dot">01</div>
+                    <div class="th-label">Planejamento</div>
+                    <div class="th-desc">Levantamento técnico e orçamento detalhado.</div>
+                </div>
+                <div class="th-step reveal" style="animation-delay:.15s">
+                    <div class="th-dot">02</div>
+                    <div class="th-label">Mobilização</div>
+                    <div class="th-desc">Proteção da área e isolamento operacional.</div>
+                </div>
+                <div class="th-step reveal" style="animation-delay:.3s">
+                    <div class="th-dot">03</div>
+                    <div class="th-label">Execução</div>
+                    <div class="th-desc">Obra acompanhada por engenheiro dedicado.</div>
+                </div>
+                <div class="th-step reveal" style="animation-delay:.45s">
+                    <div class="th-dot">04</div>
+                    <div class="th-label">Entrega</div>
+                    <div class="th-desc">Limpeza pós-obra e entrega das chaves.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BLOCO 2: DIFERENCIAIS (imagem esq | texto dir) -->
+    <section class="content-split py-section bg-light-section">
+        <div class="blueprint-line top"></div>
+        <div class="container-xl">
+            <div class="row align-items-center g-5 reveal">
+                <div class="col-lg-6 order-lg-1">
+                    <div class="split-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=900&q=80"
+                            alt="Diferencial Konstruir Residencial" class="split-img" />
+                        <div class="split-img-badge"><i class="bi bi-award-fill me-1"></i> 25 anos de expertise</div>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-2">
+                    <span class="section-tag">Por que a Konstruir é diferente?</span>
+                    <h2 class="section-title" style="font-size:clamp(1.6rem,3vw,2.5rem)">Diferenciais Konstruir</h2>
+                    <div class="space-y mb-4">
+                        <div class="diferencial-item">
+                            <i class="bi bi-calendar-check-fill text-cyan me-2"></i>
+                            <div>
+                                <strong>Prazo cumprido à risca:</strong> você sabe exatamente o dia da mudança.
+                            </div>
+                        </div>
+
+                        <div class="diferencial-item">
+                            <i class="bi bi-cash-coin text-cyan me-2"></i>
+                            <div>
+                                <strong>Orçamento respeitado:</strong> sem sustos ou gastos extras surpresa.
+                            </div>
+                        </div>
+
+                        <div class="diferencial-item">
+                            <i class="bi bi-person-workspace text-cyan me-2"></i>
+                            <div>
+                                <strong>Engenheiro responsável:</strong> alguém cobrando a qualidade por você.
+                            </div>
+                        </div>
+
+                        <div class="diferencial-item">
+                            <i class="bi bi-brush-fill text-cyan me-2"></i>
+                            <div>
+                                <strong>Organização diária:</strong> canteiro limpo e respeito às regras do prédio.
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="fw-bold text-navy mb-2">O Método Konstruir: Do papel à entrega rápida</h5>
+                    <ul class="list-unstyled para-quem-list mb-4">
+                        <li><i class="bi bi-search text-cyan me-2"></i><strong>Diagnóstico:</strong> Análise técnica
+                            precisa das necessidades do imóvel.</li>
+                        <li><i class="bi bi-calendar-check text-cyan me-2"></i><strong>Planejamento:</strong> Cronograma
+                            inteligente focado na continuidade da sua rotina.</li>
+                        <li><i class="bi bi-tools text-cyan me-2"></i><strong>Execução:</strong> Sincronia total entre
+                            elétrica, civil e acabamentos.</li>
+                        <li><i class="bi bi-key text-cyan me-2"></i><strong>Entrega Final:</strong> Ambiente
+                            higienizado, chaves na mão e pronto para morar.</li>
+                    </ul>
+                    <a href="index.html#contato" class="btn-cta">Falar com um Engenheiro</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <div class="cta-strip">
+        <div class="container-xl">
+            <h2>Vamos começar a planejar o seu novo lar?</h2>
+            <p>Clique no botão abaixo e fale agora mesmo com um de nossos engenheiros pelo WhatsApp. É rápido e sem
+                compromisso!</p>
+            <a href="https://wa.me/5511999897493" target="_blank" class="btn-cta">
+                <i class="bi bi-whatsapp me-2"></i> Falar com um Engenheiro
+            </a>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container-xl">
+            <div class="row g-5 py-5">
+                <div class="col-md-4">
+                    <img src="https://media.base44.com/images/public/69f974116a29c0ce78d97c8c/de2abe68b_logo.png"
+                        alt="Konstruir Engenharia" class="logo-img logo-footer mb-3" />
+                    <p class="text-white-50 small lh-lg">25 anos transformando desafios do canteiro em processos
+                        inteligentes.</p>
+                    <div class="d-flex gap-3 mt-3">
+                        <a href="https://www.instagram.com/konstruirengenharia/" target="_blank"
+                            class="footer-social"><i class="bi bi-instagram"></i></a>
+                        <a href="https://wa.me/5511999897493" target="_blank" class="footer-social"><i
+                                class="bi bi-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="footer-heading">Serviços</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="estruturas-metalicas.html">Estruturas Metálicas</a></li>
+                        <li><a href="manutencao-corporativa.html">Manutenção Corporativa</a></li>
+                        <li><a href="reformas-retrofit.html">Reformas & Retrofit</a></li>
+                        <li><a href="construcao-civil.html">Construção Civil</a></li>
+                        <li><a href="residencial.html">Manutenção Residencial</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="footer-heading">Contato</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="https://wa.me/5511999897493" target="_blank"
+                                class="d-flex align-items-center gap-2"><i class="bi bi-whatsapp text-cyan"></i>(11)
+                                99989-7493</a></li>
+                        <li>contato@konstruir.com.br</li>
+                        <li>São Paulo, SP — Brasil</li>
+                        <li><a href="https://www.instagram.com/konstruirengenharia/" target="_blank"
+                                class="d-flex align-items-center gap-2 mt-1"><i
+                                    class="bi bi-instagram text-cyan"></i>@konstruirengenharia</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 Konstruir Engenharia. Todos os direitos reservados.</span>
+                <span>ART • CREA • Conformidade NRs</span>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5511999897493" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

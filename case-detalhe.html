@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case — Konstruir Engenharia</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .detail-wrap { padding: 3rem 0 5rem; }
+
+    /* BACK BUTTON */
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      font-size: .875rem;
+      font-weight: 600;
+      color: #002d55;
+      text-decoration: none;
+      margin-bottom: 2rem;
+      transition: gap .2s;
+    }
+    .back-btn:hover { gap: .8rem; color: #00b8e6; }
+
+    /* MAIN IMAGE */
+    .main-img-wrap {
+      border-radius: 12px;
+      overflow: hidden;
+      background: #f3f4f6;
+      aspect-ratio: 16/10;
+    }
+    .main-img-wrap img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      cursor: pointer;
+      transition: transform .4s;
+    }
+    .main-img-wrap img:hover { transform: scale(1.02); }
+
+    /* SIDE INFO */
+    .case-cat-badge {
+      display: inline-block;
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #00b8e6;
+      background: rgba(0,184,230,.1);
+      border-radius: 50px;
+      padding: .3rem .9rem;
+      margin-bottom: 1rem;
+    }
+    .case-detail-title {
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: 800;
+      color: #002d55;
+      line-height: 1.2;
+      margin-bottom: .5rem;
+    }
+    .case-location {
+      display: flex;
+      align-items: center;
+      gap: .4rem;
+      color: #6b7280;
+      font-size: .9rem;
+      margin-bottom: 1.5rem;
+    }
+    .atuacao-title {
+      font-size: .8rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: #00b8e6;
+      margin-bottom: .5rem;
+    }
+    .atuacao-list {
+      list-style: none;
+      padding: 0; margin: 0 0 1.5rem;
+    }
+    .atuacao-list li {
+      font-size: .9rem;
+      color: #374151;
+      padding: .35rem 0;
+      border-bottom: 1px solid #f0f0f0;
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+    }
+    .atuacao-list li::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: #00b8e6;
+      flex-shrink: 0;
+    }
+    .case-desc-text {
+      font-size: .92rem;
+      color: #4b5563;
+      line-height: 1.7;
+    }
+
+    /* THUMBNAIL GALLERY */
+    .gallery-title {
+      font-size: .8rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: #00b8e6;
+      margin: 1.5rem 0 .75rem;
+    }
+    .thumb-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: .5rem;
+    }
+    .thumb-grid img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 6px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: border-color .2s, opacity .2s;
+    }
+    .thumb-grid img:hover { opacity: .85; }
+    .thumb-grid img.active { border-color: #00b8e6; }
+
+    /* LIGHTBOX */
+    .lightbox {
+      display: none;
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,.92);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox img {
+      max-width: 90vw;
+      max-height: 85vh;
+      border-radius: 8px;
+      object-fit: contain;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 1.5rem; right: 1.5rem;
+      color: #fff;
+      font-size: 2rem;
+      cursor: pointer;
+      background: none; border: none;
+      line-height: 1;
+    }
+    .lightbox-prev,
+    .lightbox-next {
+      position: absolute;
+      top: 50%; transform: translateY(-50%);
+      background: rgba(255,255,255,.1);
+      border: none; color: #fff;
+      font-size: 1.5rem;
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: background .2s;
+    }
+    .lightbox-prev:hover,
+    .lightbox-next:hover { background: rgba(255,255,255,.2); }
+    .lightbox-prev { left: 1.5rem; }
+    .lightbox-next { right: 1.5rem; }
+
+    /* CTA CARD */
+    .cta-card {
+      background: linear-gradient(135deg, #002d55, #004a8f);
+      border-radius: 12px;
+      padding: 2rem;
+      color: #fff;
+      margin-top: 2rem;
+    }
+    .cta-card h4 { font-size: 1.1rem; font-weight: 700; margin-bottom: .5rem; }
+    .cta-card p  { font-size: .88rem; color: rgba(255,255,255,.75); margin-bottom: 1.2rem; }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" id="siteHeader">
+    <div class="container-xl">
+      <nav class="d-flex align-items-center justify-content-between py-3">
+        <a href="index.html" class="text-decoration-none">
+          <img src="https://media.base44.com/images/public/69f974116a29c0ce78d97c8c/de2abe68b_logo.png" alt="Konstruir Engenharia" class="logo-img" />
+        </a>
+        <ul class="nav-links d-none d-lg-flex align-items-center gap-4 list-unstyled mb-0">
+          <li><a href="index.html" class="nav-link-item">Home</a></li>
+          <li><a href="estruturas-metalicas.html" class="nav-link-item">Estruturas Metálicas</a></li>
+          <li><a href="manutencao-corporativa.html" class="nav-link-item">Manutenção</a></li>
+          <li><a href="reformas-retrofit.html" class="nav-link-item">Reformas & Retrofit</a></li>
+          <li><a href="construcao-civil.html" class="nav-link-item">Construção Civil</a></li>
+          <li><a href="cases.html" class="nav-link-item active">Cases</a></li>
+        </ul>
+        <a href="index.html#contato" class="btn-cta d-none d-lg-inline-flex">Consulta Técnica</a>
+        <button class="mobile-toggle d-lg-none" id="mobileToggle"><i class="bi bi-list fs-4"></i></button>
+      </nav>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <ul class="list-unstyled mb-0 p-4">
+        <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+        <li><a href="estruturas-metalicas.html" class="mobile-nav-link">Estruturas Metálicas</a></li>
+        <li><a href="manutencao-corporativa.html" class="mobile-nav-link">Manutenção Corporativa</a></li>
+        <li><a href="reformas-retrofit.html" class="mobile-nav-link">Reformas & Retrofit</a></li>
+        <li><a href="construcao-civil.html" class="mobile-nav-link">Construção Civil</a></li>
+        <li><a href="cases.html" class="mobile-nav-link">Cases</a></li>
+        <li class="mt-3"><a href="index.html#contato" class="btn-cta d-block text-center">Consulta Técnica</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- DETAIL CONTENT -->
+  <div class="detail-wrap">
+    <div class="container-xl">
+
+      <a href="cases.html" class="back-btn">
+        <i class="bi bi-arrow-left"></i> Voltar para Cases
+      </a>
+
+      <div class="row g-5" id="caseDetail">
+        <!-- Preenchido via JS -->
+      </div>
+
+    </div>
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lbClose"><i class="bi bi-x-lg"></i></button>
+    <button class="lightbox-prev" id="lbPrev"><i class="bi bi-chevron-left"></i></button>
+    <img id="lbImg" src="" alt="" />
+    <button class="lightbox-next" id="lbNext"><i class="bi bi-chevron-right"></i></button>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container-xl">
+      <div class="row g-5 py-5">
+        <div class="col-md-4">
+          <img src="https://media.base44.com/images/public/69f974116a29c0ce78d97c8c/de2abe68b_logo.png" alt="Konstruir Engenharia" class="logo-img logo-footer mb-3" />
+          <p class="text-white-50 small lh-lg">25 anos transformando desafios do canteiro em processos inteligentes.</p>
+          <div class="d-flex gap-3 mt-3">
+            <a href="https://www.instagram.com/konstruirengenharia/" target="_blank" class="footer-social"><i class="bi bi-instagram"></i></a>
+            <a href="https://wa.me/5511999897493" target="_blank" class="footer-social"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h5 class="footer-heading">Serviços</h5>
+          <ul class="list-unstyled footer-links">
+            <li><a href="estruturas-metalicas.html">Estruturas Metálicas</a></li>
+            <li><a href="manutencao-corporativa.html">Manutenção Corporativa</a></li>
+            <li><a href="reformas-retrofit.html">Reformas & Retrofit</a></li>
+            <li><a href="construcao-civil.html">Construção Civil</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5 class="footer-heading">Contato</h5>
+          <ul class="list-unstyled footer-links">
+            <li><a href="https://wa.me/5511999897493" target="_blank" class="d-flex align-items-center gap-2"><i class="bi bi-whatsapp text-cyan"></i>(11) 99989-7493</a></li>
+            <li>contato@konstruir.com.br</li>
+            <li>São Paulo, SP — Brasil</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Konstruir Engenharia. Todos os direitos reservados.</span>
+        <span>ART • CREA • Conformidade NRs</span>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5511999897493" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/cases-data.js"></script>
+  <script>
+    // Read case id from URL
+    const params = new URLSearchParams(window.location.search);
+    const caseId = params.get('id');
+    const caseData = window.casesData && window.casesData.find(c => c.id === caseId);
+
+    const container = document.getElementById('caseDetail');
+
+    if (!caseData) {
+      container.innerHTML = '<div class="col-12 text-center py-5"><p class="text-muted">Case não encontrado.</p><a href="cases.html" class="btn-cta">Ver todos os cases</a></div>';
+    } else {
+      document.title = caseData.name + ' — Konstruir Engenharia';
+
+      let thumbsHtml = caseData.photos.map((p, i) =>
+        `<img src="${p}" alt="Foto ${i+1}" class="${i===0?'active':''}" onclick="setMain(${i})" />`
+      ).join('');
+
+      let atuacaoHtml = caseData.atuacao.map(a => `<li>${a}</li>`).join('');
+
+      container.innerHTML = `
+        <div class="col-lg-6">
+          <div class="main-img-wrap mb-3">
+            <img id="mainImg" src="${caseData.photos[0]}" alt="${caseData.name}" onclick="openLightbox(currentIdx)" />
+          </div>
+          <div class="thumb-grid" id="thumbGrid">
+            ${thumbsHtml}
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <span class="case-cat-badge">${caseData.cat}</span>
+          <h1 class="case-detail-title">${caseData.name}</h1>
+          <div class="case-location">
+            <i class="bi bi-geo-alt-fill text-cyan"></i>
+            ${caseData.location}
+          </div>
+          <div class="atuacao-title">Atuação Konstruir</div>
+          <ul class="atuacao-list">${atuacaoHtml}</ul>
+          <p class="case-desc-text">${caseData.desc}</p>
+
+          <div class="gallery-title mt-4">Fotos do Projeto</div>
+          <div class="thumb-grid">
+            ${caseData.photos.map((p,i) =>
+              `<img src="${p}" alt="Foto ${i+1}" class="${i===0?'active':''}" onclick="openLightbox(${i})" />`
+            ).join('')}
+          </div>
+
+          <div class="cta-card mt-4">
+            <h4>Quer um projeto como este?</h4>
+            <p>Fale com nossos engenheiros e receba uma consulta técnica gratuita.</p>
+            <a href="https://wa.me/5511999897493" target="_blank" class="btn-cta">
+              <i class="bi bi-whatsapp me-2"></i>Chamar no WhatsApp
+            </a>
+          </div>
+        </div>
+      `;
+    }
+
+    // Main image switcher
+    let currentIdx = 0;
+    function setMain(idx) {
+      if (!caseData) return;
+      currentIdx = idx;
+      document.getElementById('mainImg').src = caseData.photos[idx];
+      document.querySelectorAll('#thumbGrid img').forEach((img, i) => {
+        img.classList.toggle('active', i === idx);
+      });
+    }
+
+    // Lightbox
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lbImg');
+
+    function openLightbox(idx) {
+      if (!caseData) return;
+      currentIdx = idx;
+      lbImg.src = caseData.photos[idx];
+      lb.classList.add('open');
+    }
+
+    document.getElementById('lbClose').onclick = () => lb.classList.remove('open');
+    document.getElementById('lbPrev').onclick = () => {
+      currentIdx = (currentIdx - 1 + caseData.photos.length) % caseData.photos.length;
+      lbImg.src = caseData.photos[currentIdx];
+    };
+    document.getElementById('lbNext').onclick = () => {
+      currentIdx = (currentIdx + 1) % caseData.photos.length;
+      lbImg.src = caseData.photos[currentIdx];
+    };
+    lb.addEventListener('click', e => { if (e.target === lb) lb.classList.remove('open'); });
+    document.addEventListener('keydown', e => {
+      if (!lb.classList.contains('open')) return;
+      if (e.key === 'ArrowLeft') document.getElementById('lbPrev').click();
+      if (e.key === 'ArrowRight') document.getElementById('lbNext').click();
+      if (e.key === 'Escape') lb.classList.remove('open');
+    });
+  </script>
+</body>
+</html>
