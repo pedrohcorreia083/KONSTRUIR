@@ -38,37 +38,49 @@
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  <!-- HEADER -->
   <header class="site-header" id="siteHeader">
-    <div class="container-xl">
+    <div class="container-fluid px-lg-5 px-xl-6">
       <nav class="d-flex align-items-center justify-content-between py-3">
         <a href="index.html" class="text-decoration-none">
-          <img src="./img/logo.png" alt="Konstruir Engenharia" class="logo-img" />
+          <img src="https://media.base44.com/images/public/69f974116a29c0ce78d97c8c/de2abe68b_logo.png"
+            alt="Konstruir Engenharia" class="logo-img" />
         </a>
-        <ul class="nav-links d-none d-lg-flex align-items-center gap-2 list-unstyled mb-0">
-          <li><a href="manutencao-corporativa.html" class="nav-link-item">Manutenção Corporativa</a></li>
-          <li><a href="reformas-retrofit.html" class="nav-link-item">Reformas & Retrofit</a></li>
-          <li><a href="construcao-civil.html" class="nav-link-item">Infraestrutura e Construção</a></li>
-          <li><a href="estruturas-metalicas.html" class="nav-link-item">Estruturas Metálicas</a></li>
-          <li><a href="residenciais.html" class="nav-link-item">Reformas Residenciais</a></li>
+        <ul class="nav-links d-none d-lg-flex align-items-center gap-4 list-unstyled mb-0">
+          <li><a href="index.html" class="nav-link-item">Home</a></li>
+          <li><a href="index.html#contato" class="nav-link-item">Contato</a></li>
+          <li><a href="index.html#sobre" class="nav-link-item">Quem somos</a></li>
+          <!-- Dropdown Serviços -->
+          <li class="nav-item dropdown">
+            <a class="nav-link-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">Serviços</a>
+
+            <ul class="dropdown-menu">
+              <li><a href="manutencao-corporativa.html" class="dropdown-item">Manutenção Corporativa</a>
+              </li>
+              <li><a href="reformas-retrofit.html" class="dropdown-item">Reformas & Retrofit </a></li>
+              <li><a href="construcao-civil.html" class="dropdown-item">Infraestrutura e Construção</a>
+              </li>
+              <li><a href="estruturas-metalicas.html" class="dropdown-item">Estruturas Metálicas</a></li>
+              <li><a href="residenciais.html" class="dropdown-item">Reformas Residenciais</a></li>
+            </ul>
+          </li>
           <li><a href="cases.html" class="nav-link-item">Cases</a></li>
         </ul>
-        <!-- <a href="#contato" class="btn-cta d-none d-lg-inline-flex">Contato</a> -->
-        <button class="mobile-toggle d-lg-none" id="mobileToggle" aria-label="Menu">
-          <i class="bi bi-list fs-4"></i>
-        </button>
+        <a href="index.html#contato" class="btn-cta d-none d-lg-inline-flex">Consulta Técnica</a>
+        <button class="mobile-toggle d-lg-none" id="mobileToggle"><i class="bi bi-list fs-4"></i></button>
       </nav>
     </div>
     <div class="mobile-menu" id="mobileMenu">
       <ul class="list-unstyled mb-0 p-4">
         <li><a href="index.html" class="mobile-nav-link">Home</a></li>
-        <li><a href="estruturas-metalicas.html" class="mobile-nav-link">Estruturas Metálicas</a></li>
+        <li><a href="contato.html" class="mobile-nav-link">Contato</a></li>
         <li><a href="manutencao-corporativa.html" class="mobile-nav-link">Manutenção Corporativa</a></li>
         <li><a href="reformas-retrofit.html" class="mobile-nav-link">Reformas & Retrofit</a></li>
-        <li><a href="construcao-civil.html" class="mobile-nav-link">Construção Civil</a></li>
+        <li><a href="construcao-civil.html" class="mobile-nav-link">Infraestrutura e Construção</a></li>
+        <li><a href="estruturas-metalicas.html" class="mobile-nav-link">Estruturas Metálicas</a></li>
         <li><a href="residenciais.html" class="mobile-nav-link">Reformas Residenciais</a></li>
         <li><a href="cases.html" class="mobile-nav-link">Cases</a></li>
-        <!-- <li class="mt-3"><a href="#contato" class="btn-cta d-block text-center">Consulta Técnica</a></li> -->
+        <li class="mt-4"><a href="contato.html" class="btn-cta d-block text-center">Consulta Técnica</a></li>
       </ul>
     </div>
   </header>
@@ -87,7 +99,7 @@
       <div class="bp-v" style="left:50%"></div>
       <div class="bp-v" style="left:75%"></div>
     </div>
-    <div class="container-xl h-100 d-flex align-items-center">
+    <div class="container-fluid px-lg-5 px-xl-6 h-100 d-flex align-items-center">
       <div class="hero-content">
         <div class="hero-badge animate-fade-up" style="animation-delay:.2s">
           25 Anos de Engenharia
@@ -109,7 +121,7 @@
   <!-- QUEM SOMOS -->
   <section class="section-about py-section" id="sobre">
     <div class="blueprint-line top"></div>
-    <div class="container-xl">
+    <div class="container-fluid px-lg-5 px-xl-6">
       <div class="row align-items-center g-5">
         <div class="col-lg-6 reveal">
           <span class="section-tag">Quem Somos</span>
@@ -138,7 +150,7 @@
   <section class="section-services py-section bg-light-section" id="servicos">
     <div class="blueprint-line top"></div>
 
-    <div class="container-xl">
+    <div class="container-fluid px-lg-5 px-xl-6">
       <div class="mb-5 reveal">
         <span class="section-tag">O Que Fazemos</span>
         <h2 class="section-title">Soluções</h2>
@@ -263,9 +275,9 @@
   </section>
 
   <!-- COMO FAZEMOS -->
-  <section class="section-how py-section" id="como">
+  <section class="section-how py-section d-none d-lg-block" id="como">
     <div class="blueprint-line top"></div>
-    <div class="container-xl">
+    <div class="container-fluid px-lg-5 px-xl-6">
       <div class="mb-2 reveal">
         <span class="section-tag">Como Fazemos</span>
         <h2 class="section-title">O Método Konstruir: Engenharia de Alta Performance</h2>
@@ -334,7 +346,7 @@
 
   <!-- CLIENTES -->
   <section class="section-clients py-section bg-navy">
-    <div class="container-xl">
+    <div class="container-fluid px-lg-5 px-xl-6">
       <div class="text-center mb-5 reveal">
         <span class="section-tag">Clientes Atendidos</span>
         <h2 class="section-title text-white">Quem Confia em Nós</h2>
@@ -358,7 +370,7 @@
   <!-- CONTATO -->
   <section class="section-contact py-section bg-light-section" id="contato">
     <div class="blueprint-line top"></div>
-    <div class="container-xl">
+    <div class="container-fluid px-lg-5 px-xl-6">
       <div class="row g-5 align-items-start">
         <div class="col-lg-5 reveal">
           <span class="section-tag">Contato</span>
@@ -418,7 +430,7 @@
 
   <!-- FOOTER -->
   <footer class="site-footer">
-    <div class="container-xl">
+    <div class="container-fluid px-lg-5 px-xl-6">
       <div class="row g-5 py-5">
         <div class="col-md-4">
           <img src="https://media.base44.com/images/public/69f974116a29c0ce78d97c8c/de2abe68b_logo.png"

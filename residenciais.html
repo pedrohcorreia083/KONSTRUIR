@@ -149,7 +149,7 @@
 
     <!-- HEADER -->
     <header class="site-header" id="siteHeader">
-        <div class="container-xl">
+        <div class="container-fluid px-lg-5 px-xl-6">
             <nav class="d-flex align-items-center justify-content-between py-3">
                 <a href="index.html" class="text-decoration-none">
                     <img src="https://media.base44.com/images/public/69f974116a29c0ce78d97c8c/de2abe68b_logo.png"
@@ -157,11 +157,23 @@
                 </a>
                 <ul class="nav-links d-none d-lg-flex align-items-center gap-4 list-unstyled mb-0">
                     <li><a href="index.html" class="nav-link-item">Home</a></li>
-                    <li><a href="estruturas-metalicas.html" class="nav-link-item">Estruturas Metálicas</a></li>
-                    <li><a href="manutencao-corporativa.html" class="nav-link-item">Manutenção</a></li>
-                    <li><a href="reformas-retrofit.html" class="nav-link-item">Reformas & Retrofit</a></li>
-                    <li><a href="construcao-civil.html" class="nav-link-item">Construção Civil</a></li>
-                    <li><a href="residencial.html" class="nav-link-item active">Residencial</a></li>
+                    <li><a href="index.html#contato" class="nav-link-item">Contato</a></li>
+                    <li><a href="index.html#sobre" class="nav-link-item">Quem somos</a></li>
+                    <!-- Dropdown Serviços -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Serviços</a>
+
+                        <ul class="dropdown-menu">
+                            <li><a href="manutencao-corporativa.html" class="dropdown-item">Manutenção Corporativa</a>
+                            </li>
+                            <li><a href="reformas-retrofit.html" class="dropdown-item">Reformas & Retrofit </a></li>
+                            <li><a href="construcao-civil.html" class="dropdown-item">Infraestrutura e Construção</a>
+                            </li>
+                            <li><a href="estruturas-metalicas.html" class="dropdown-item">Estruturas Metálicas</a></li>
+                            <li><a href="residenciais.html" class="dropdown-item">Reformas Residenciais</a></li>
+                        </ul>
+                    </li>
                     <li><a href="cases.html" class="nav-link-item">Cases</a></li>
                 </ul>
                 <a href="index.html#contato" class="btn-cta d-none d-lg-inline-flex">Consulta Técnica</a>
@@ -171,14 +183,14 @@
         <div class="mobile-menu" id="mobileMenu">
             <ul class="list-unstyled mb-0 p-4">
                 <li><a href="index.html" class="mobile-nav-link">Home</a></li>
-                <li><a href="estruturas-metalicas.html" class="mobile-nav-link">Estruturas Metálicas</a></li>
+                <li><a href="contato.html" class="mobile-nav-link">Contato</a></li>
                 <li><a href="manutencao-corporativa.html" class="mobile-nav-link">Manutenção Corporativa</a></li>
                 <li><a href="reformas-retrofit.html" class="mobile-nav-link">Reformas & Retrofit</a></li>
-                <li><a href="construcao-civil.html" class="mobile-nav-link">Construção Civil</a></li>
-                <li><a href="residencial.html" class="mobile-nav-link">Residencial</a></li>
+                <li><a href="construcao-civil.html" class="mobile-nav-link">Infraestrutura e Construção</a></li>
+                <li><a href="estruturas-metalicas.html" class="mobile-nav-link">Estruturas Metálicas</a></li>
+                <li><a href="residenciais.html" class="mobile-nav-link">Reformas Residenciais</a></li>
                 <li><a href="cases.html" class="mobile-nav-link">Cases</a></li>
-                <li class="mt-3"><a href="index.html#contato" class="btn-cta d-block text-center">Consulta Técnica</a>
-                </li>
+                <li class="mt-4"><a href="contato.html" class="btn-cta d-block text-center">Consulta Técnica</a></li>
             </ul>
         </div>
     </header>
@@ -188,7 +200,7 @@
         <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1800&q=80"
             alt="Manutenção Residencial" />
         <div class="sph-overlay"></div>
-        <div class="container-xl">
+        <div class="container-fluid px-lg-5 px-xl-6">
             <div class="sph-content animate-fade-up">
                 <div class="breadcrumb-trail">
                     <a href="index.html">Home</a>
@@ -196,15 +208,13 @@
                     <span class="current">Manutenção Residencial</span>
                 </div>
                 <h1 class="sph-title">Manutenção<br>Residencial</h1>
-                <p class="sph-sub">Toda a segurança e a organização de uma grande empresa de engenharia, dedicada a
-                    cuidar da reforma da sua casa ou apartamento. Prazo garantido e respeito ao seu bolso.</p>
             </div>
         </div>
     </section>
 
     <!-- BLOCO 1: SOLUÇÕES (texto esq | imagem dir) -->
     <section class="content-split py-section">
-        <div class="container-xl">
+        <div class="container-fluid px-lg-5 px-xl-6">
             <div class="row align-items-center g-5 reveal">
                 <div class="col-lg-6">
                     <span class="section-tag">Do Projeto às Chaves</span>
@@ -302,7 +312,7 @@
     <!-- CALCULADORA CTA -->
     <section class="py-section bg-light-section">
         <div class="blueprint-line top"></div>
-        <div class="container-xl">
+        <div class="container-fluid px-lg-5 px-xl-6">
             <div class="calc-cta reveal">
                 <h3>📐 Simule o custo da sua reforma</h3>
                 <p>Use nossa Calculadora de Reforma e descubra em minutos quanto vai custar transformar o seu espaço.
@@ -315,8 +325,8 @@
     </section>
 
     <!-- CRONOGRAMA DE EXECUÇÃO -->
-    <div class="cronograma">
-        <div class="container-xl">
+    <div class="cronograma d-none d-lg-block">
+        <div class="container-fluid px-lg-5 px-xl-6">
             <div class="cronograma-title">Nosso Cronograma de Execução</div>
             <div class="timeline-h">
                 <div class="th-step reveal">
@@ -346,7 +356,7 @@
     <!-- BLOCO 2: DIFERENCIAIS (imagem esq | texto dir) -->
     <section class="content-split py-section bg-light-section">
         <div class="blueprint-line top"></div>
-        <div class="container-xl">
+        <div class="container-fluid px-lg-5 px-xl-6">
             <div class="row align-items-center g-5 reveal">
                 <div class="col-lg-6 order-lg-1">
                     <div class="split-img-wrap">
@@ -406,7 +416,7 @@
 
     <!-- CTA FINAL -->
     <div class="cta-strip">
-        <div class="container-xl">
+        <div class="container-fluid px-lg-5 px-xl-6">
             <h2>Vamos começar a planejar o seu novo lar?</h2>
             <p>Clique no botão abaixo e fale agora mesmo com um de nossos engenheiros pelo WhatsApp. É rápido e sem
                 compromisso!</p>
@@ -418,7 +428,7 @@
 
     <!-- FOOTER -->
     <footer class="site-footer">
-        <div class="container-xl">
+        <div class="container-fluid px-lg-5 px-xl-6">
             <div class="row g-5 py-5">
                 <div class="col-md-4">
                     <img src="https://media.base44.com/images/public/69f974116a29c0ce78d97c8c/de2abe68b_logo.png"
