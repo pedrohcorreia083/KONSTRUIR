@@ -688,6 +688,20 @@ section {
   color: var(--slate);
 }
 
+.logo-destaque {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (max-width: 991.98px) {
+  .logo-destaque {
+    max-width: 200px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
 /* ═══════════════════════════════════════════
    SERVICE CARDS (home)
 ═══════════════════════════════════════════ */
