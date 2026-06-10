@@ -2,6 +2,18 @@
 <html lang="pt-BR">
 
 <head>
+
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NLHBCBRT');</script>
+  <!-- End Google Tag Manager -->
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Case — Konstruir Engenharia</title>
@@ -249,8 +261,13 @@
 
 <body>
 
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NLHBCBRT" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
   <!-- HEADER -->
-  <header class="site-header" id="siteHeader">
+  <header style="background: #002d55;" class="site-header" id="siteHeader">
     <div class="container-fluid px-lg-5 px-xl-6">
       <nav class="d-flex align-items-center justify-content-between py-3">
         <a href="index.html" class="text-decoration-none">
@@ -301,7 +318,7 @@
   <div class="detail-wrap">
     <div class="container-fluid px-lg-5 px-xl-6">
 
-      <a href="cases.html" class="back-btn">
+      <a href="cases.html" class="back-btn py-5">
         <i class="bi bi-arrow-left"></i> Voltar para Cases
       </a>
 
@@ -399,20 +416,9 @@
         <div class="col-lg-6">
           <span class="case-cat-badge">${caseData.cat}</span>
           <h1 class="case-detail-title">${caseData.name}</h1>
-          <div class="case-location">
-            <i class="bi bi-geo-alt-fill text-cyan"></i>
-            ${caseData.location}
-          </div>
           <div class="atuacao-title">Atuação Konstruir</div>
           <ul class="atuacao-list">${atuacaoHtml}</ul>
           <p class="case-desc-text">${caseData.desc}</p>
-
-          <div class="gallery-title mt-4">Fotos do Projeto</div>
-          <div class="thumb-grid">
-            ${caseData.photos.map((p, i) =>
-        `<img src="${p}" alt="Foto ${i + 1}" class="${i === 0 ? 'active' : ''}" onclick="openLightbox(${i})" />`
-      ).join('')}
-          </div>
 
           <div class="cta-card mt-4">
             <h4>Quer um projeto como este?</h4>

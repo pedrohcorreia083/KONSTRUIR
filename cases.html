@@ -2,6 +2,18 @@
 <html lang="pt-BR">
 
 <head>
+
+      <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NLHBCBRT');</script>
+    <!-- End Google Tag Manager -->
+     
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cases de Sucesso — Konstruir Engenharia</title>
@@ -167,6 +179,11 @@
 
 <body>
 
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NLHBCBRT" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
   <header class="site-header" id="siteHeader">
     <div class="container-fluid px-lg-5 px-xl-6">
       <nav class="d-flex align-items-center justify-content-between py-3">
@@ -230,12 +247,12 @@
     <div class="container-fluid px-lg-5 px-xl-6">
       <ul class="filter-tabs" id="filterTabs">
         <li><button class="active" data-filter="todos">Todos</button></li>
-        <li><button data-filter="varejo">Varejo</button></li>
+        <li><button data-filter="residencial">Residencial</button></li>
         <li><button data-filter="corporativo">Corporativo</button></li>
-        <li><button data-filter="industrial">Industrial</button></li>
-        <li><button data-filter="saude">Saúde</button></li>
+        <li><button data-filter="reformas">Reformas</button></li>
+        <!--<li><button data-filter="saude">Saúde</button></li>
         <li><button data-filter="restaurante">Restaurantes</button></li>
-        <li><button data-filter="logistica">Logística</button></li>
+        <li><button data-filter="logistica">Logística</button></li> -->
       </ul>
     </div>
   </div>
@@ -313,12 +330,12 @@
   <script>
     // Mapa categoria -> data-filter
     const catMap = {
-      'Varejo': 'varejo',
+      'Residencial': 'residencial',
       'Corporativo': 'corporativo',
-      'Industrial': 'industrial',
-      'Saúde': 'saude',
-      'Restaurantes': 'restaurante',
-      'Logística': 'logistica',
+      'Reformas': 'reformas',
+      // 'Saúde': 'saude',
+      // 'Restaurantes': 'restaurante',
+      // 'Logística': 'logistica',
     };
 
     const grid = document.getElementById('casesGrid');
