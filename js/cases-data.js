@@ -23,6 +23,110 @@ window.casesData = [
       "./img/cases/Residencial/1/Edificio-4.png",
     ],
   },
+  {
+    id: "res-rivieira",
+    cat: "Residencial",
+    name: "RESIDÊNCIA CASA RIVIERA SÃO LOURENÇO",
+    desc: "Execução de obras e reformas residenciais com foco em qualidade, organização e valorização do imóvel. Atuamos desde pequenas melhorias até reformas completas, garantindo acompanhamento técnico e excelente acabamento.",
+    atuacao: [
+      "Planejamento e Gestão: Definição de escopo, cronograma, orçamento e acompanhamento da obra.",
+      "Reformas e Adequações: Demolições, ampliações, alterações de layout e adequações estruturais.",
+      "Instalações e Infraestrutura: Execução e modernização de sistemas elétricos, hidráulicos e complementares.",
+      "Acabamentos: Aplicação de revestimentos, pintura, gesso, fachadas e demais acabamentos finais.",
+    ],
+    photos: [
+      "./img/cases/Residencial/2/2.jpg",
+      "./img/cases/Residencial/2/1.jpg",
+      "./img/cases/Residencial/2/3.jpg",
+      "./img/cases/Residencial/2/4.jpg",
+      "./img/cases/Residencial/2/5.jpg",
+    ],
+  },
+  {
+    id: "res-ALPHAVILLE",
+    cat: "Residencial",
+    name: "RESIDÊNCIA ALPHAVILLE",
+    desc: "Execução de obras e reformas residenciais com foco em qualidade, organização e valorização do imóvel. Atuamos desde pequenas melhorias até reformas completas, garantindo acompanhamento técnico e excelente acabamento.",
+    atuacao: [
+      "Planejamento e Gestão: Definição de escopo, cronograma, orçamento e acompanhamento da obra.",
+      "Reformas e Adequações: Demolições, ampliações, alterações de layout e adequações estruturais.",
+      "Instalações e Infraestrutura: Execução e modernização de sistemas elétricos, hidráulicos e complementares.",
+      "Acabamentos: Aplicação de revestimentos, pintura, gesso, fachadas e demais acabamentos finais.",
+    ],
+    photos: [
+      "./img/cases/Residencial/3/2.jpg",
+      "./img/cases/Residencial/3/1.jpg",
+      "./img/cases/Residencial/3/3.jpg",
+    ],
+  },
+  {
+    id: "res-MIGUEL",
+    cat: "Residencial",
+    name: "RESIDÊNCIA MIGUEL MAGNO",
+    desc: "Execução de obras e reformas residenciais com foco em qualidade, organização e valorização do imóvel. Atuamos desde pequenas melhorias até reformas completas, garantindo acompanhamento técnico e excelente acabamento.",
+    atuacao: [
+      "Planejamento e Gestão: Definição de escopo, cronograma, orçamento e acompanhamento da obra.",
+      "Reformas e Adequações: Demolições, ampliações, alterações de layout e adequações estruturais.",
+      "Instalações e Infraestrutura: Execução e modernização de sistemas elétricos, hidráulicos e complementares.",
+      "Acabamentos: Aplicação de revestimentos, pintura, gesso, fachadas e demais acabamentos finais.",
+    ],
+    photos: [
+      "./img/cases/Residencial/4/1.jpg",
+      "./img/cases/Residencial/4/2.jpg",
+    ],
+  },
+  {
+    id: "res-TASMANIA",
+    cat: "Residencial",
+    name: "RESIDÊNCIA CONDOMÍNIO TASMÂNIA",
+    desc: "Execução de obras e reformas residenciais com foco em qualidade, organização e valorização do imóvel. Atuamos desde pequenas melhorias até reformas completas, garantindo acompanhamento técnico e excelente acabamento.",
+    atuacao: [
+      "Planejamento e Gestão: Definição de escopo, cronograma, orçamento e acompanhamento da obra.",
+      "Reformas e Adequações: Demolições, ampliações, alterações de layout e adequações estruturais.",
+      "Instalações e Infraestrutura: Execução e modernização de sistemas elétricos, hidráulicos e complementares.",
+      "Acabamentos: Aplicação de revestimentos, pintura, gesso, fachadas e demais acabamentos finais.",
+    ],
+    photos: [
+      "./img/cases/Residencial/5/2.jpg",
+      "./img/cases/Residencial/5/1.jpg",
+    ],
+  },
+  {
+    id: "res-ITU",
+    cat: "Residencial",
+    name: "RESIDÊNCIA ITU SP",
+    desc: "Execução de obras e reformas residenciais com foco em qualidade, organização e valorização do imóvel. Atuamos desde pequenas melhorias até reformas completas, garantindo acompanhamento técnico e excelente acabamento.",
+    atuacao: [
+      "Planejamento e Gestão: Definição de escopo, cronograma, orçamento e acompanhamento da obra.",
+      "Reformas e Adequações: Demolições, ampliações, alterações de layout e adequações estruturais.",
+      "Instalações e Infraestrutura: Execução e modernização de sistemas elétricos, hidráulicos e complementares.",
+      "Acabamentos: Aplicação de revestimentos, pintura, gesso, fachadas e demais acabamentos finais.",
+    ],
+    photos: [
+      "./img/cases/Residencial/6/23.jpg",
+      "./img/cases/Residencial/6/24.jpg",
+    ],
+  },
+  {
+    id: "res-SAHY",
+    cat: "Residencial",
+    name: "CONDOMÍNIO RESIDENCIAL 4 CASAS BARRA DO SAHY",
+    desc: "Execução de obras e reformas residenciais com foco em qualidade, organização e valorização do imóvel. Atuamos desde pequenas melhorias até reformas completas, garantindo acompanhamento técnico e excelente acabamento.",
+    atuacao: [
+      "Planejamento e Gestão: Definição de escopo, cronograma, orçamento e acompanhamento da obra.",
+      "Reformas e Adequações: Demolições, ampliações, alterações de layout e adequações estruturais.",
+      "Instalações e Infraestrutura: Execução e modernização de sistemas elétricos, hidráulicos e complementares.",
+      "Acabamentos: Aplicação de revestimentos, pintura, gesso, fachadas e demais acabamentos finais.",
+    ],
+    photos: [
+      "./img/cases/Residencial/7/2.jpg",
+      "./img/cases/Residencial/7/1.jpg",
+      "./img/cases/Residencial/7/3.jpg",
+      "./img/cases/Residencial/7/4.jpg",
+      "./img/cases/Residencial/7/5.jpg",
+    ],
+  },
+
   // ── CORPORATIVO ──
   {
     id: "corp-rojemac",
@@ -82,7 +186,7 @@ window.casesData = [
       "Controle de Acessos Inteligente: Construção de guarita blindada, sistema de clausura para pedestres e automação dos acessos do condomínio.",
       "Infraestrutura e Urbanização: Modernização da fachada, portões, escadas, corrimãos, paisagismo e revitalização tecnológica da área externa.",
       "Valorização das Áreas Comuns: Transformação de espaços subutilizados em academia moderna e renovação completa do salão de festas e área gourmet.",
-     ],
+    ],
     photos: [
       "./img/cases/Reformas/1/AL-(0).png",
       "./img/cases/Reformas/1/AL-(1).png",
@@ -97,7 +201,6 @@ window.casesData = [
       "./img/cases/Reformas/1/AL-(11).png",
       "./img/cases/Reformas/1/AL-(12).png",
       "./img/cases/Reformas/1/AL-(13).png",
-
     ],
   },
 ];
